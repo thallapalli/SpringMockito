@@ -1,0 +1,1 @@
+insert into ITEM  values(1,'Item1',10,20)
