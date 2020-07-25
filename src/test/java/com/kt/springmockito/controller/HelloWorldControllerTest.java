@@ -14,7 +14,7 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
-import com.kt.springmockito.HelloWorldController;
+import com.kt.springmockito.controllers.HelloWorldController;
 
 @WebMvcTest(value=HelloWorldController.class)
 public class HelloWorldControllerTest {

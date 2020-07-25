@@ -18,8 +18,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
-import com.kt.springmockito.ItemController;
 import com.kt.springmockito.business.ItemBusinessService;
+import com.kt.springmockito.controllers.ItemController;
 import com.kt.springmockito.entity.Item;
 
 @WebMvcTest(value = ItemController.class)

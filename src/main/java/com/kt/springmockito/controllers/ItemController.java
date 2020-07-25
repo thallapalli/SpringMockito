@@ -1,4 +1,6 @@
-package com.kt.springmockito;
+package com.kt.springmockito.controllers;
+
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,6 +23,15 @@ public class ItemController {
 	public Item ItemFromService() {
 		
 		return  itemBusinessService.retrieveHardCodedItem();
+		
+	}
+	
+	@GetMapping(value = "/all-items-from-database")
+	public List<Item> retrieveAllItems() {
+		
+		return itemBusinessService.retrieveAllItem();
+		
+		
 		
 	}
 }

@@ -15,6 +15,9 @@ public class Item {
 	private int price;
 	@Transient
 	private int value;
+	public Item() {
+	}
+	
 	public Item(int id, String name, int price,int quantity) {
 		// TODO Auto-generated constructor stub
 		
