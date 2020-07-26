@@ -2,6 +2,9 @@ package com.kt.springmockito.controller;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import java.util.Arrays;
+
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.anyInt;
@@ -48,6 +51,18 @@ public class ItemControllerTest {
 				.andExpect(content().json("{\"id\": 1,\"name\":\"Ball\",\"quantity\":2}"));
 
 	}
+	
+	@Test
+	public void testretrieveAllItem() throws Exception {
+		// call /hello-world
+		// response Hello World
+		when(itemBusinessService.retrieveAllItem()).thenReturn(Arrays.asList(new Item(1,"Ball",2,2)));
+		RequestBuilder req = MockMvcRequestBuilders.get("/all-items-from-database").accept(MediaType.APPLICATION_JSON);
+		MockMvc.perform(req).andExpect(status().isOk())
+				.andExpect(content().json("[{\"id\": 1,\"name\":\"Ball\",\"quantity\":2}]"));
+
+	}
+	
 	
 
 }
