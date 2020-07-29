@@ -8,7 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.web.client.RestClientException;
-
+//XUNITPATTERNS
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 public class ItemControllerIntgerationTest {
 	@Autowired
