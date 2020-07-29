@@ -12,10 +12,9 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.skyscreamer.jsonassert.JSONAssert;
-import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(MockitoExtension.class)
-class HamcrestMatchersTest {
+class AssertJTest {
 String actualResponse="{\"id\":1,\"name\":\"Ball\",\"quantity\":2,\"price\":10}";
 
 	
@@ -31,7 +30,7 @@ String actualResponse="{\"id\":1,\"name\":\"Ball\",\"quantity\":2,\"price\":10}"
 	void learning() throws JSONException {
 
 		List<Integer> asList = Arrays.asList(12,1,45);
-		assertThat(asList).hasSize(3);
+		assertThat(asList, hasSize(3));
 	
 
 	}
