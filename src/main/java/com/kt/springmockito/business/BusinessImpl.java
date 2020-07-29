@@ -1,16 +1,15 @@
 package com.kt.springmockito.business;
 
+import java.util.Arrays;
+
 import com.kt.springmockito.data.BusinessService;
 
 public class BusinessImpl {
 	private BusinessService businessService;
 	
 	public int calculdateSum(int[] nums) {
-		int sum=0;
-		for(int a:nums) {
-			sum+=a;
-		}
-		return sum;
+		return Arrays.stream(nums).reduce(Integer::sum).orElse(0);
+		
 		
 	}
 	
